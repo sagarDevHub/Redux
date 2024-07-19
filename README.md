@@ -33,6 +33,7 @@ Async action --->
 ## code
 async function initUser(){
     const {data} = await axios.get('http://localhost:3000/accounts/1')
+    
     return {type : init, payload: data.amount};
 }
 
