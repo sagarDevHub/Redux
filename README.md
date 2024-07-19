@@ -30,11 +30,13 @@ We cannot create async actions.
 
 Async action --->
 
+## code
 async function initUser(){
     const {data} = await axios.get('http://localhost:3000/accounts/1')
     return {type : init, payload: data.amount};
 }
-this code will through error.
+
+This code will through error.
 
 Actions must be syncronous. To overcome this problem we use the Thunk middleware.
 
